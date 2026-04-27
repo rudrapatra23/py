@@ -1,13 +1,7 @@
-def check_integer():
-    user_input = input("Enter an integer: ")
+while True:
     try:
-        if not user_input.lstrip('-').isdigit():
-            raise ValueError(f"Invalid input: '{user_input}' is not a valid integer.")
-
-        val = int(user_input)
-        print("Valid integer entered:", val)
-
-    except ValueError as e:
-        print(e)
-
-check_integer()
+        num = int(input("Enter an integer: "))
+        print(f"Valid integer entered: {num}")
+        break
+    except ValueError:
+        print("Invalid input! Please enter a valid integer.")
